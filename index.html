@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chirag eMitra & Bank CSP</title>
+  <style>
+    body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f4f9;color:#222;}
+    header {background:#0ea5e9;color:white;padding:15px;text-align:center;}
+    nav {background:#0369a1;padding:10px;text-align:center;}
+    nav a {color:white;margin:0 12px;text-decoration:none;font-weight:bold;}
+    nav a:hover {text-decoration:underline;}
+    section {padding:40px 20px;max-width:1000px;margin:auto;}
+    h2 {color:#0369a1;margin-bottom:12px;}
+    .services {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+    .card {background:white;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+    .contact-form {display:grid;gap:10px;}
+    input,textarea {padding:10px;border:1px solid #ccc;border-radius:6px;}
+    button {background:#0ea5e9;color:white;padding:12px;border:none;border-radius:6px;cursor:pointer;}
+    button:hover {background:#0369a1;}
+    footer {background:#0369a1;color:white;text-align:center;padding:15px;margin-top:20px;}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Chirag eMitra & Bank CSP</h1>
+    <p>आपके सभी सरकारी व बैंकिंग कार्यों के लिए विश्वसनीय सेवा केंद्र</p>
+  </header>
+
+  <nav>
+    <a href="#home">होम</a>
+    <a href="#services">सेवाएँ</a>
+    <a href="#contact">संपर्क</a>
+  </nav>
+
+  <section id="home">
+    <h2>स्वागत है!</h2>
+    <p>हम आपके लिए eMitra और Bank CSP की सभी सुविधाएँ उपलब्ध कराते हैं। चाहे आपको बिल जमा करना हो, पैसे भेजने हों, बैंकिंग या सरकारी दस्तावेज़ का काम – सब कुछ एक ही जगह।</p>
+  </section>
+
+  <section id="services">
+    <h2>हमारी सेवाएँ</h2>
+    <div class="services">
+      <div class="card"><h3>बिल भुगतान</h3><p>बिजली, पानी, मोबाइल, DTH सभी बिलों का भुगतान।</p></div>
+      <div class="card"><h3>बैंकिंग सेवाएँ</h3><p>पैसा निकासी, जमा, ट्रांसफर और बैलेंस चेक।</p></div>
+      <div class="card"><h3>PAN & Aadhaar</h3><p>PAN Card, Aadhaar Update व अन्य सेवाएँ।</p></div>
+      <div class="card"><h3>रिचार्ज</h3><p>मोबाइल व DTH रिचार्ज।</p></div>
+      <div class="card"><h3>बीमा</h3><p>जीवन बीमा, वाहन बीमा सेवाएँ।</p></div>
+      <div class="card"><h3>Ticket Booking</h3><p>Train, Bus व Flight टिकट बुकिंग।</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>संपर्क करें</h2>
+    <p><b>पता:</b> Chirag eMitra Shop, (यहाँ अपना पता डालें)<br>
+       <b>मोबाइल:</b> ‪+91-9982307379‬<br>
+       <b>Email:</b> chiragemitra@example.com</p>
+  <h3>Contact Form</h3><form class="contact-form"></form><a href="https://wa.me/919982307379?text=Namaste%20Mujhe%20Service%20chahiye" target="_blank">
+  WhatsApp पर संदेश भेजें
+</a>
+    <h3>Contact Form</h3>
+    <form class="contact-form" onsubmit="alert('धन्यवाद! आपका संदेश भेज दिया गया है।'); return false;">
+      <input type="text" placeholder="नाम" required>
+      <input type="email" placeholder="ईमेल" required>
+      <textarea placeholder="आपका संदेश" rows="4" required></textarea>
+      <button type="submit">भेजें</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Chirag eMitra & Bank CSP | सभी अधिकार सुरक्षित</p>
+  </footer>
+
+</body>
+</html>
