@@ -1,56 +1,328 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
-<head>
+ <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chirag eMitra & Bank CSP</title>
+  <title>Chirag eMitra &amp; Bank CSP</title>
   <style>
-    body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f4f9;color:#222;}
-    header {background:#0ea5e9;color:white;padding:15px;text-align:center;}
-    nav {background:#0369a1;padding:10px;text-align:center;}
-    nav a {color:white;margin:0 12px;text-decoration:none;font-weight:bold;}
-    nav a:hover {text-decoration:underline;}
-    section {padding:40px 20px;max-width:1000px;margin:auto;}
-    h2 {color:#0369a1;margin-bottom:12px;}
-    .services {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-    .card {background:white;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
-    .contact-form {display:grid;gap:10px;}
-    input,textarea {padding:10px;border:1px solid #ccc;border-radius:6px;}
-    button {background:#0ea5e9;color:white;padding:12px;border:none;border-radius:6px;cursor:pointer;}
-    button:hover {background:#0369a1;}
-    footer {background:#0369a1;color:white;text-align:center;padding:15px;margin-top:20px;}
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f4f9;
+      color: #222;
+    }
+    header {
+      background: #0ea5e9;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #0369a1;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #0369a1;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
+    .card h3 {
+      color: #0369a1;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    .card p {
+      color: #666;
+      line-height: 1.5;
+    }
+    .options {
+      display: none;
+      margin-top: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .options.show {
+      display: block;
+    }
+    .option-item {
+      padding: 8px 12px;
+      background: #e3f2fd;
+      margin: 5px 0;
+      border-radius: 5px;
+      font-size: 14px;
+      color: #0369a1;
+      border-left: 3px solid #0ea5e9;
+    }
+    .toggle-btn {
+      background: #0ea5e9;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    .toggle-btn:hover {
+      background: #0369a1;
+    }
+    .contact-form {
+      display: grid;
+      gap: 15px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    button {
+      background: #0ea5e9;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #0369a1;
+    }
+    footer {
+      background: #0369a1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
   </style>
-</head>
-<body>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
   <header>
-    <h1>Chirag eMitra & Bank CSP</h1>
-    <p>आपके सभी सरकारी व बैंकिंग कार्यों के लिए विश्वसनीय सेवा केंद्र</p>
+   <h1>Chirag eMitra &amp; Bank CSP</h1>
+   <p>आपके सभी सरकारी व बैंकिंग कार्यों के लिए विश्वसनीय सेवा केंद्र</p>
   </header>
-
-  <nav>
-    <a href="#home">होम</a>
-    <a href="#services">सेवाएँ</a>
-    <a href="#contact">संपर्क</a>
+  <nav><a href="#home">होम</a> <a href="#services">सेवाएँ</a> <a href="#contact">संपर्क</a>
   </nav>
-
   <section id="home">
-    <h2>स्वागत है!</h2>
-    <p>हम आपके लिए eMitra और Bank CSP की सभी सुविधाएँ उपलब्ध कराते हैं। चाहे आपको बिल जमा करना हो, पैसे भेजने हों, बैंकिंग या सरकारी दस्तावेज़ का काम – सब कुछ एक ही जगह।</p>
+   <h2>स्वागत है!</h2>
+   <p>हम आपके लिए eMitra और Bank CSP की सभी सुविधाएँ उपलब्ध कराते हैं। चाहे आपको बिल जमा करना हो, पैसे भेजने हों, बैंकिंग या सरकारी दस्तावेज़ का काम – सब कुछ एक ही जगह।</p>
   </section>
-
   <section id="services">
-    <h2>हमारी सेवाएँ</h2>
-    <div class="services">
-      <div class="card"><h3>बिल भुगतान</h3><p>बिजली, पानी, मोबाइल, DTH सभी बिलों का भुगतान।</p></div>
-      <div class="card"><h3>बैंकिंग सेवाएँ</h3><p>पैसा निकासी, जमा, ट्रांसफर और बैलेंस चेक।</p></div>
-      <div class="card"><h3>PAN & Aadhaar</h3><p>PAN Card, Aadhaar Update व अन्य सेवाएँ।</p></div>
-      <div class="card"><h3>रिचार्ज</h3><p>मोबाइल व DTH रिचार्ज।</p></div>
-      <div class="card"><h3>बीमा</h3><p>जीवन बीमा, वाहन बीमा सेवाएँ।</p></div>
-      <div class="card"><h3>Ticket Booking</h3><p>Train, Bus व Flight टिकट बुकिंग।</p></div>
+   <h2>हमारी सेवाएँ</h2>
+   <div class="services">
+    <div class="card" onclick="toggleOptions(this)">
+     <h3>रिचार्ज</h3>
+     <p>मोबाइल व DTH रिचार्ज।</p>
+     <div class="options">
+      <div class="option-item">
+       • मोबाइल रिचार्ज (सभी ऑपरेटर)
+      </div>
+      <div class="option-item">
+       • DTH रिचार्ज
+      </div>
+      <div class="option-item">
+       • डेटा कार्ड रिचार्ज
+      </div>
+      <div class="option-item">
+       • लैंडलाइन बिल पेमेंट
+      </div>
+     </div>
     </div>
+    <div class="card" onclick="toggleOptions(this)">
+     <h3>बैंकिंग सेवाएँ</h3>
+     <p>पैसा निकासी, जमा, ट्रांसफर और बैलेंस चेक।</p>
+     <div class="options">
+      <div class="option-item">
+       • कैश विड्रॉल (Cash Withdrawal)
+      </div>
+      <div class="option-item">
+       • कैश डिपॉजिट (Cash Deposit)
+      </div>
+      <div class="option-item">
+       • मनी ट्रांसफर (AEPS/IMPS)
+      </div>
+      <div class="option-item">
+       • बैलेंस इन्क्वायरी
+      </div>
+      <div class="option-item">
+       • मिनी स्टेटमेंट
+      </div>
+      <div class="option-item">
+       • आधार पे सेवा
+      </div>
+     </div>
+    </div>
+    <div class="card" onclick="toggleOptions(this)">
+     <h3>बीमा</h3>
+     <p>जीवन बीमा, वाहन बीमा सेवाएँ।</p>
+     <div class="options">
+      <div class="option-item">
+       • जीवन बीमा (LIC)
+      </div>
+      <div class="option-item">
+       • वाहन बीमा
+      </div>
+      <div class="option-item">
+       • स्वास्थ्य बीमा
+      </div>
+      <div class="option-item">
+       • फसल बीमा
+      </div>
+      <div class="option-item">
+       • प्रधानमंत्री सुरक्षा बीमा
+      </div>
+     </div>
+    </div>
+    <div class="card" onclick="toggleOptions(this)">
+     <h3>Ticket Booking</h3>
+     <p>Train, Bus व Flight टिकट बुकिंग।</p>
+     <div class="options">
+      <div class="option-item">
+       • रेलवे टिकट बुकिंग (IRCTC)
+      </div>
+      <div class="option-item">
+       • बस टिकट बुकिंग
+      </div>
+      <div class="option-item">
+       • फ्लाइट टिकट बुकिंग
+      </div>
+      <div class="option-item">
+       • होटल बुकिंग
+      </div>
+     </div>
+    </div>
+    <div class="card" onclick="toggleOptions(this)">
+     <h3>ई-मित्र सेवा</h3>
+     <p>मूल निवास, जाती, राशन कार्ड, ड्राइविंग लाइसेंस, पासपोर्ट सेवा, पीसीसी और सभी सेवाएँ।</p>
+     <div class="options">
+      <div class="option-item">
+       • मूल निवास प्रमाण पत्र
+      </div>
+      <div class="option-item">
+       • जाति प्रमाण पत्र
+      </div>
+      <div class="option-item">
+       • आय प्रमाण पत्र
+      </div>
+      <div class="option-item">
+       • राशन कार्ड सेवा
+      </div>
+      <div class="option-item">
+       • ड्राइविंग लाइसेंस
+      </div>
+      <div class="option-item">
+       • पासपोर्ट सेवा
+      </div>
+      <div class="option-item">
+       • पुलिस वेरिफिकेशन (PCC)
+      </div>
+      <div class="option-item">
+       • विकलांग प्रमाण पत्र
+      </div>
+     </div>
+    </div>
+    <div class="card" onclick="toggleOptions(this)">
+     <h3>बिल पेमेंट</h3>
+     <p>बिजली, पानी, गैस और अन्य बिल भुगतान।</p>
+     <div class="options">
+      <div class="option-item">
+       • बिजली बिल पेमेंट
+      </div>
+      <div class="option-item">
+       • पानी बिल पेमेंट
+      </div>
+      <div class="option-item">
+       • गैस बिल पेमेंट
+      </div>
+      <div class="option-item">
+       • इंटरनेट बिल पेमेंट
+      </div>
+      <div class="option-item">
+       • केबल TV बिल
+      </div>
+     </div>
+    </div>
+    <div class="card" onclick="toggleOptions(this)">
+     <h3>डॉक्यूमेंट सेवा</h3>
+     <p>आधार कार्ड, पैन कार्ड और अन्य दस्तावेज़ सेवाएँ।</p>
+     <div class="options">
+      <div class="option-item">
+       • आधार कार्ड अपडेट
+      </div>
+      <div class="option-item">
+       • पैन कार्ड सेवा
+      </div>
+      <div class="option-item">
+       • वोटर ID कार्ड
+      </div>
+      <div class="option-item">
+       • डिजिटल लॉकर सेवा
+      </div>
+      <div class="option-item">
+       • डॉक्यूमेंट प्रिंट/स्कैन
+      </div>
+     </div>
+    </div>
+   </div>
   </section>
-
   <section id="contact">
+<<<<<<< HEAD
+   <h2>संपर्क करें</h2>
+   <div class="contact-form"><input type="text" id="customerName" placeholder="आपका नाम" required> <input type="tel" id="customerPhone" placeholder="मोबाइल नंबर" required> <textarea id="customerMessage" placeholder="आपको कौन सी सेवा चाहिए? (जैसे: मोबाइल रिचार्ज, आधार कार्ड, बैंकिंग सेवा आदि)" rows="4" required></textarea> <button type="button" onclick="sendMessage()">संदेश भेजें</button>
+   </div>
+   <div style="margin-top: 30px; text-align: center; background: white; padding: 20px; border-radius: 10px;">
+    <h3 style="color: #0369a1; margin-bottom: 15px;">तुरंत संपर्क करें</h3>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;"><a href="https://web.whatsapp.com/send?phone=919982307379" target="_blank" style="background: #25d366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold;">📱 WhatsApp करें</a> <a href="tel:+919982307379" style="background: #0ea5e9; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold;">📞 कॉल करें</a>
+    </div>
+    <p style="margin-top: 15px; color: #796a9f;"> 
+      <a href = https://www.google.com/maps/place/%E0%A4%9A%E0%A4%BF%E0%A4%B0%E0%A4%BE%E0%A4%97+%E0%A4%88%E0%A4%AE%E0%A4%BF%E0%A4%A4%E0%A5%8D%E0%A4%B0+,+%E0%A4%8F%E0%A4%B8%E0%A4%AC%E0%A5%80%E0%A4%86%E0%A4%88+%E0%A4%AC%E0%A5%88%E0%A4%82%E0%A4%95+%E0%A4%95%E0%A4%BF%E0%A4%93%E0%A4%B8%E0%A5%8D%E0%A4%95,+pum+ke+samne,+GENJI+Dungarpur+Road,+pterol,+Genji,+Rajasthan+314404/@23.7221546,73.698236,19z/data=!4m6!3m5!1s0x39676bbf8c898af1:0xbf8f4a5f54ba1b30!8m2!3d23.7220978!4d73.6983214!16s%2Fg%2F11n749svwx?utm_campaign=ml-ardi-16204288&g_ep=Eg1tbF8yMDI1MTAyMl8wIOC7DCoASAJQAQ%3D%3D</a>📍
+       Chirag E-Mitra Shop, (NAYARA PETROL PUMP KE SAMNE
+GENJI DUNGARPUR RAJASTHAN-314404)</p>
+   </div>
+=======
     <h2>संपर्क करें</h2>
     <p><b>पता:</b> Chirag eMitra Shop, (,NAYARA PETROL PUMP KE SAMNE 
       <BR>GENJI DUNGARPUR RAJASTHAN-314404)<br>
@@ -66,13 +338,126 @@
       <textarea placeholder="आपका संदेश" rows="4" required></textarea>
       <button type="submit">भेजें</button>
     </form>
+>>>>>>> 840c9d761c905191a523b1ae28b1880eb620e313
   </section>
-
   <footer>
+<<<<<<< HEAD
+   <p>© 2025 1.2v Chirag eMitra &amp; Bank CSP. सभी अधिकार सुरक्षित।</p>
+=======
     <p>© 2025 Chirag eMitra & Bank CSP | </p>
+>>>>>>> 840c9d761c905191a523b1ae28b1880eb620e313
   </footer>
+  <script>
+    function toggleOptions(card) {
+      const options = card.querySelector('.options');
+      const isVisible = options.classList.contains('show');
+      
+      // Hide all other options first
+      document.querySelectorAll('.options').forEach(opt => {
+        opt.classList.remove('show');
+      });
+      
+      // Toggle current options
+      if (!isVisible) {
+        options.classList.add('show');
+      }
+    }
 
-</body>
+    function sendMessage() {
+      const name = document.getElementById('customerName').value;
+      const phone = document.getElementById('customerPhone').value;
+      const message = document.getElementById('customerMessage').value;
+      
+      if (!name || !phone || !message) {
+        showNotification('कृपया सभी फील्ड भरें!', 'error');
+        return;
+      }
+      
+      // Show loading
+      const submitBtn = document.querySelector('button[onclick="sendMessage()"]');
+      submitBtn.textContent = 'भेजा जा रहा है...';
+      submitBtn.disabled = true;
+      
+      // Get current time
+      const currentTime = new Date().toLocaleString('hi-IN');
+      
+      // Create formatted message
+      const customerDetails = `नया ग्राहक संदेश\n\nनाम: ${name}\nमोबाइल: ${phone}\nसमय: ${currentTime}\n\nसेवा की जरूरत:\n${message}\n\nChirag eMitra & Bank CSP`;
+      
+      // Try multiple WhatsApp methods
+      setTimeout(() => {
+        // Method 1: Try mobile WhatsApp first
+        const mobileURL = `whatsapp://send?phone=919982307379&text=${encodeURIComponent(customerDetails)}`;
+        
+        // Method 2: Fallback to web WhatsApp
+        const webURL = `https://api.whatsapp.com/send?phone=919982307379&text=${encodeURIComponent(customerDetails)}`;
+        
+        // Method 3: Alternative web WhatsApp
+        const altWebURL = `https://wa.me/919982307379?text=${encodeURIComponent(customerDetails)}`;
+        
+        // Try to open WhatsApp - multiple fallbacks
+        let opened = false;
+        
+        // First try mobile app
+        const mobileLink = document.createElement('a');
+        mobileLink.href = mobileURL;
+        mobileLink.target = '_blank';
+        mobileLink.click();
+        
+        // After 2 seconds, try web version if mobile didn't work
+        setTimeout(() => {
+          if (!opened) {
+            const webLink = document.createElement('a');
+            webLink.href = webURL;
+            webLink.target = '_blank';
+            webLink.click();
+          }
+        }, 2000);
+        
+        // After 4 seconds, try alternative if others didn't work
+        setTimeout(() => {
+          if (!opened) {
+            const altLink = document.createElement('a');
+            altLink.href = altWebURL;
+            altLink.target = '_blank';
+            altLink.click();
+          }
+        }, 4000);
+        
+        // Show success message
+        showNotification('✅ WhatsApp खुल रहा है! Message भेजने के लिए Send दबाएं।\n\n📞 हम जल्दी ही आपसे संपर्क करेंगे।', 'success');
+        
+        // Reset form
+        submitBtn.textContent = 'संदेश भेजें';
+        submitBtn.disabled = false;
+        document.getElementById('customerName').value = '';
+        document.getElementById('customerPhone').value = '';
+        document.getElementById('customerMessage').value = '';
+        
+        // Log for reference
+        console.log('Customer Details:', { name, phone, message, timestamp: currentTime });
+        
+      }, 1000);
+    }
+    
+    function showNotification(message, type) {
+      const notification = document.createElement('div');
+      const bgColor = type === 'error' ? '#ff4444' : '#22c55e';
+      notification.style.cssText = `position: fixed; top: 20px; right: 20px; background: ${bgColor}; color: white; padding: 15px; border-radius: 8px; z-index: 1200; max-width: 350px; white-space: pre-line;`;
+      notification.textContent = message;
+      document.body.appendChild(notification);
+      setTimeout(() => notification.remove(), 6000);
+    }
+  </script>
+ <script>
+  (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b)
+    {var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'995bad128270087a',t:'MTc2MTY2NzU0MS4wMDAwMDA='};
+  var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')
+  [0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}
+}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';
+  a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);
+  else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+  </script>
+  </body>
 </html>
-
 
